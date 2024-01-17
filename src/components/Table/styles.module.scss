@@ -1,0 +1,33 @@
+.Table {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  .tableContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  tr {
+    display: flex;
+  }
+
+  th,
+  td {
+    width: 100%;
+    cursor: pointer;
+  }
+
+  th.active {
+    display: flex;
+    justify-content: space-between;
+    background-color: #7cf0d3;
+  }
+  .noData {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

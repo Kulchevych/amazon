@@ -1,0 +1,114 @@
+.TableHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .rowsPerPage {
+    position: relative;
+    display: flex;
+    gap: 5px;
+    font-size: 16px;
+    line-height: 24px;
+    color: #c1c5d6;
+    cursor: pointer;
+
+    span {
+      color: #242833;
+    }
+
+    .arrow {
+      position: relative;
+      top: 12px;
+      right: -6px;
+      width: 4px;
+      border-left: 4px solid transparent;
+      border-right: 4px solid transparent;
+      border-top: 5px solid #c1c5d6;
+    }
+
+    .arrowUp {
+      top: -8px;
+      transform: rotate(180deg);
+    }
+
+    .dropdown {
+      position: absolute;
+      width: 54px;
+      z-index: 2;
+      top: 24px;
+      right: -28px;
+      margin: 0;
+      padding: 0;
+      color: #242833;
+      background: white;
+      box-shadow: 0px -4px 60px rgba(62, 63, 99, 0.2);
+      border-radius: 8px;
+      list-style: none;
+      user-select: none;
+
+      li {
+        text-align: center;
+        padding: 0 15px;
+
+        &:hover {
+          background: #f2f4f8;
+
+          &:first-child {
+            border-radius: 8px 8px 0 0;
+          }
+
+          &:last-child {
+            border-radius: 0 0 8px 8px;
+          }
+        }
+      }
+
+      .active {
+        color: #00e4ac;
+      }
+    }
+  }
+
+  .paginationContainer {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    .itemsNumber {
+      color: #242833;
+
+      span {
+        color: #c1c5d6;
+      }
+    }
+
+    .pagination {
+      display: flex;
+      gap: 20px;
+
+      .prev,
+      .next {
+        width: 6px;
+        height: 10px;
+        border: none;
+        background: url("../../../assets/images/prev-disable.svg");
+
+        &.next {
+          transform: rotate(180deg);
+        }
+      }
+
+      .active {
+        background: url("../../../assets/images/next-active.svg");
+        cursor: pointer;
+
+        &.prev {
+          transform: rotate(180deg);
+        }
+        &.next {
+          transform: rotate(0);
+        }
+      }
+    }
+  }
+}
