@@ -91,7 +91,7 @@ export const Table: React.FC<Props> = ({ data, columns, onRowClick }) => {
           onChange={(event) => setSearchTerm(event.target.value)}
         />
       </div>
-      {visibleData?.length || data.length ? (
+      {visibleData?.length || filteredData.length ? (
         <div className={classes.tableContainer}>
           <TableHeader
             rowsPerPage={rowsPerPage}
